@@ -33,10 +33,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.PrimeNumbers", "15.Prime
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.MergeSort", "13.MergeSort\13.MergeSort.csproj", "{542CB682-8ABD-41AF-8828-025AF34236F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.SubsetWithSumS", "16.SubsetWithSumS\16.SubsetWithSumS.csproj", "{1AA030F0-E47C-4364-BF84-8050DA54CC50}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.PermutationsOfSet", "19.PermutationsOfSet\19.PermutationsOfSet.csproj", "{A8229855-7245-4B28-A8E2-0617986A4488}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,14 +99,6 @@ Global
 		{542CB682-8ABD-41AF-8828-025AF34236F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{542CB682-8ABD-41AF-8828-025AF34236F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{542CB682-8ABD-41AF-8828-025AF34236F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1AA030F0-E47C-4364-BF84-8050DA54CC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1AA030F0-E47C-4364-BF84-8050DA54CC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1AA030F0-E47C-4364-BF84-8050DA54CC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1AA030F0-E47C-4364-BF84-8050DA54CC50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8229855-7245-4B28-A8E2-0617986A4488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8229855-7245-4B28-A8E2-0617986A4488}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8229855-7245-4B28-A8E2-0617986A4488}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8229855-7245-4B28-A8E2-0617986A4488}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

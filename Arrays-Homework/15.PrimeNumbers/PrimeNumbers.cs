@@ -15,6 +15,8 @@ class PrimeNumbers
         {
             arePrime[i] = true;
         }
+
+        // 0 and 1 are not prime
         arePrime[0] = false;
         arePrime[1] = false;
         int prime = 2;

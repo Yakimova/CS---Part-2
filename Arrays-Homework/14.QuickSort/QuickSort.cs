@@ -25,17 +25,15 @@ class QuickSort
 
             if (i <= j)
             {
-                // Swap
-                IComparable tmp = elements[i];
+                IComparable temp = elements[i];
                 elements[i] = elements[j];
-                elements[j] = tmp;
+                elements[j] = temp;
 
                 i++;
                 j--;
             }
         }
 
-        // Recursive calls
         if (left < j)
         {
             Quicksort(elements, left, j);

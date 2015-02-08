@@ -18,7 +18,7 @@ class IndexOfLetters
         }
 
         //input
-        Console.Write("Please enter a word: ");
+        Console.Write("Please enter a word with capital letters: ");
         string word = Console.ReadLine();
 
         for (int i = 0; i < word.Length; i++)

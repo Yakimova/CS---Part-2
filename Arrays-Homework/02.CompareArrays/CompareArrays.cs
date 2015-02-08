@@ -8,37 +8,51 @@ class CompareArrays
 {
     static void Main()
     {
-        Console.Write("Please enter the number of elements in the arrays: ");
-        int elements = int.Parse(Console.ReadLine());
-        int[] array1 = new int[elements];
-        int[] array2 = new int[elements];
-        for (int index = 0; index < elements; index++)
+        //input
+        Console.WriteLine("Please enter the first array of integers, separated by \",\": ");
+        string firstInput = Console.ReadLine();
+        string[] firstNumbers = firstInput.Split(',');
+        int firstLenght = firstNumbers.Length;
+        int[] firstArray = new int[firstLenght];
+        for (int i = 0; i < firstLenght; i++)
         {
-            Console.Write("array1[{0}] = ", index);
-            array1[index] = int.Parse(Console.ReadLine());
+            firstArray[i] = int.Parse(firstNumbers[i]);
         }
-        for (int index = 0; index < elements; index++)
+        Console.WriteLine("Please enter the second array of integers, separated by \",\": ");
+        string secondInput = Console.ReadLine();
+        string[] secondNumbers = secondInput.Split(',');
+        int secondLenght = secondNumbers.Length;
+        int[] secondArray = new int[secondLenght];
+        for (int i = 0; i < secondLenght; i++)
         {
-            Console.Write("array2[{0}] = ", index);
-            array2[index] = int.Parse(Console.ReadLine());
+            secondArray[i] = int.Parse(secondNumbers[i]);
         }
-        bool areEqual = true;
-        for (int index = 0; index < elements; index++)
+        
+        //if they don't have the same number of elements, they cannot be compared element by element
+        if (firstLenght != secondLenght)
         {
-            if (array1[index] != array2[index])
-            {
-                areEqual = false;
-                break;
-            }
-        }
-
-        if (areEqual == true)
-        {
-            Console.WriteLine("The two arrays are equal!");
+            Console.WriteLine("The two arrays have different number of elements!");
         }
         else
         {
-            Console.WriteLine("The two arrays are NOT equal!");
+            bool areEqual = true;
+            for (int index = 0; index < firstLenght; index++)
+            {
+                if (firstArray[index] != secondArray[index])
+                {
+                    areEqual = false;
+                    break;
+                }
+            }
+
+            if (areEqual == true)
+            {
+                Console.WriteLine("The two arrays are equal!");
+            }
+            else
+            {
+                Console.WriteLine("The two arrays are NOT equal!");
+            }
         }
     }
 }

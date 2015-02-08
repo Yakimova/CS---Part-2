@@ -10,39 +10,39 @@ class SelectionSort
     static void Main()
     {
         //input
-        Console.Write("Please enter the number of the element in the array: ");
-        int elements = int.Parse(Console.ReadLine());
-        double[] array = new double[elements];
-        for (int i = 0; i < elements; i++)
+        Console.WriteLine("Please enter a sequence of numbers separater by \",\" :");
+        string input = Console.ReadLine();
+        string[] stringNumbers = input.Split(',');
+        double[] numbers = new double[stringNumbers.Length];
+        for (int i = 0; i < stringNumbers.Length; i++)
         {
-            Console.Write("array[{0}] = ", i);
-            array[i] = double.Parse(Console.ReadLine());
+            numbers[i] = Convert.ToDouble(stringNumbers[i]);
         }
 
         //sorting
-        for (int i = 0; i < elements - 1; i++)
+        for (int i = 0; i < numbers.Length - 1; i++)
         {
-            double min = array[i];
+            double min = numbers[i];
             int smallestIndex =i;
-            for (int j = i + 1; j < elements; j++)
+            for (int j = i + 1; j < numbers.Length; j++)
             {
-                if (array[j] < min)
+                if (numbers[j] < min)
                 {
-                    min = array[j];
+                    min = numbers[j];
                     smallestIndex = j;
                 }
             }
-            double temp = array[i];
-            array[i] = array[smallestIndex];
-            array[smallestIndex] = temp;
+            double temp = numbers[i];
+            numbers[i] = numbers[smallestIndex];
+            numbers[smallestIndex] = temp;
         }
 
         //output
         Console.WriteLine();
-        for (int i = 0; i < elements; i++)
+        for (int i = 0; i < numbers.Length; i++)
         {
             Console.Write("array[{0}] = ", i);
-            Console.WriteLine(array[i]);
+            Console.WriteLine(numbers[i]);
         }
     }
 }

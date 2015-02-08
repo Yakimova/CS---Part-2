@@ -10,9 +10,9 @@ class AllocateArray
     static void Main()
     {
         int[] array = new int[20];
-        for (int index =0; index<20; index++)
+        for (int index = 0; index < 20; index++)
         {
-            array[index] = index*5;
+            array[index] = index * 5;
         }
         for (int index = 0; index < 20; index++)
         {
