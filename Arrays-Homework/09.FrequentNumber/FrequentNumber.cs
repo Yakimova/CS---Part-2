@@ -10,8 +10,8 @@ class FrequentNumber
     {
         //input
         Console.WriteLine("Please enter a sequence of numbers separater by \",\" :");
-        string input = Console.ReadLine();
-        string[] stringNumbers = input.Split(',');
+        string input = Console.ReadLine(); //"4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3";
+        string[] stringNumbers = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
         double[] numbers = new double[stringNumbers.Length];
         for (int i = 0; i < stringNumbers.Length; i++)
         {

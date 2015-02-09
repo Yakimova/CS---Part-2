@@ -12,7 +12,7 @@ class SelectionSort
         //input
         Console.WriteLine("Please enter a sequence of numbers separater by \",\" :");
         string input = Console.ReadLine();
-        string[] stringNumbers = input.Split(',');
+        string[] stringNumbers = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
         double[] numbers = new double[stringNumbers.Length];
         for (int i = 0; i < stringNumbers.Length; i++)
         {
@@ -38,7 +38,6 @@ class SelectionSort
         }
 
         //output
-        Console.WriteLine();
         for (int i = 0; i < numbers.Length; i++)
         {
             Console.Write("array[{0}] = ", i);

@@ -9,8 +9,8 @@ class MaximalSum
     static void Main()
     {
         Console.WriteLine("Please enter a sequence of numbers separater by \",\" :");
-        string input = Console.ReadLine();
-        string[] stringNumbers = input.Split(',');
+        string input = Console.ReadLine(); //"2, 3, -6, -1, 2, -1, 6, 4, -8, 8";
+        string[] stringNumbers = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
         double[] numbers = new double[stringNumbers.Length];
         for (int i = 0; i < stringNumbers.Length; i++)
         {
@@ -42,7 +42,7 @@ class MaximalSum
         }
 
         //output
-        Console.WriteLine("The maximum sum is: ");
+        Console.WriteLine("The sequence with maximum sum is: ");
         for (int i = startindex; i <= endIndex; i++)
         {
             Console.Write(numbers[i] + " + ");

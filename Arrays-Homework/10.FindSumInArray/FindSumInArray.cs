@@ -10,15 +10,15 @@ class FindSumInArray
     {
         //input
         Console.WriteLine("Please enter a sequence of numbers separater by \",\" :");
-        string input = Console.ReadLine();
-        string[] stringNumbers = input.Split(',');
+        string input = Console.ReadLine(); // "4, 3, 1, 4, 2, 5, 8";
+        string[] stringNumbers = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
         double[] numbers = new double[stringNumbers.Length];
         for (int i = 0; i < stringNumbers.Length; i++)
         {
             numbers[i] = Convert.ToDouble(stringNumbers[i]);
         }
         Console.Write("Please enter the sum: ");
-        double sum = double.Parse(Console.ReadLine());
+        double sum = double.Parse(Console.ReadLine()); //11;
 
 
         int startindex = -1;

@@ -9,8 +9,8 @@ class MaximalIncreasingSequence
     static void Main()
     {
         Console.WriteLine("Please enter a sequence of numbers separater by \",\" :");
-        string input = Console.ReadLine();
-        string[] stringNumbers = input.Split(',');
+        string input = Console.ReadLine(); // "3, 2, 3, 4, 2, 2, 4";
+        string[] stringNumbers = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
         double[] numbers = new double[stringNumbers.Length];
         for (int i = 0; i < stringNumbers.Length; i++)
         {
@@ -49,7 +49,7 @@ class MaximalIncreasingSequence
             Console.Write(numbers[i]);
             if (i != maximalSize + maximalStartIndex - 1)
             {
-                Console.Write(",");
+                Console.Write(", ");
             }
         }
         Console.WriteLine();

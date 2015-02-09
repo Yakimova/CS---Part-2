@@ -11,7 +11,7 @@ class BinarySearch
         //input
         Console.WriteLine("Please enter a sequence of numbers separater by \",\" :");
         string input = Console.ReadLine();
-        string[] stringNumbers = input.Split(',');
+        string[] stringNumbers = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
         int[] numbers = new int[stringNumbers.Length];
         for (int i = 0; i < stringNumbers.Length; i++)
         {
