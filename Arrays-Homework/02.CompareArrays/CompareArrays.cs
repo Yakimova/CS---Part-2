@@ -11,7 +11,7 @@ class CompareArrays
         //input
         Console.WriteLine("Please enter the first array of integers, separated by \",\": ");
         string firstInput = Console.ReadLine();
-        string[] firstNumbers = firstInput.Split(',');
+        string[] firstNumbers = firstInput.Split(new char[] {',', ' '}, StringSplitOptions.RemoveEmptyEntries);
         int firstLenght = firstNumbers.Length;
         int[] firstArray = new int[firstLenght];
         for (int i = 0; i < firstLenght; i++)

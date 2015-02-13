@@ -2,14 +2,15 @@
 /*
     Problem 14. Quick sort
 
-    Write a program that sorts an array of strings using the Quick sort algorithm.
+    Write a program that sorts an array of integers using the Quick sort algorithm.
 */
 class QuickSort
 {
-    public static void Quicksort(IComparable[] elements, int left, int right)
+    public static void Quicksort(int[] elements, int left, int right)
     {
-        int i = left, j = right;
-        IComparable pivot = elements[(left + right) / 2];
+        int i = left;
+        int j = right;
+        int pivot = elements[(left + right) / 2];
 
         while (i <= j)
         {
@@ -25,7 +26,7 @@ class QuickSort
 
             if (i <= j)
             {
-                IComparable temp = elements[i];
+                int temp = elements[i];
                 elements[i] = elements[j];
                 elements[j] = temp;
 
@@ -47,25 +48,20 @@ class QuickSort
     static void Main()
     {
         //input
-        Console.WriteLine("Please enter the lenght of the array of strings: ");
-        int lenght = int.Parse(Console.ReadLine());
-        string[] unsorted = new string[lenght];
-        for (int i = 0; i < lenght; i++)
+        Console.WriteLine("Please enter the array of integers, separated by \",\": ");
+        string input = Console.ReadLine();
+        string[] numbers = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        int[] unsorted = new int[numbers.Length];
+        for (int i = 0; i < numbers.Length; i++)
         {
-            Console.Write("Please enter string {0}: ", i);
-            unsorted[i] = Console.ReadLine();
+            unsorted[i] = int.Parse(numbers[i]);
         }
 
         //sorting
         Quicksort(unsorted, 0, unsorted.Length - 1);
 
         //output
-        for (int i = 0; i < unsorted.Length; i++)
-        {
-            Console.Write(unsorted[i] + " ");
-        }
-
-        Console.WriteLine();
+        Console.WriteLine("The sorted array looks like this: " + String.Join(", ", unsorted));
  
     }
 }
