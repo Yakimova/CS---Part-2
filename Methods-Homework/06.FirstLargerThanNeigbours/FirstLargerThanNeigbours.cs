@@ -18,9 +18,7 @@ class FirstLargerThanNeigbours
         {
             array[i] = double.Parse(stringArray[i]);
         }
-
-        Console.WriteLine(FirstLargerElement(array));
-
+        Console.WriteLine("The first ielement, that is larger than its neighbours is on possition: " + FirstLargerElement(array));
     }
 
     private static int FirstLargerElement(double[] array)

@@ -41,7 +41,7 @@ class SolveTasks
         Console.WriteLine("Please enter the task you want to solve!\n Use up and down arrow keys and enter.\n");
         string[] options = {"Reverse the digits of a number",
         "Calculate the average of a sequence of integers",
-        "Solve a linear equasion"};
+        "Solve a linear equation"};
         for (byte i = 0; i < 3; i++)
         {
             if (i == command)
@@ -130,7 +130,7 @@ class SolveTasks
     }
     private static void SolveLinearEquation()
     {
-        Console.WriteLine("Please enter a: ");
+        Console.Write("Please enter a: ");
         double a = double.Parse(Console.ReadLine());
         while (a == 0.0)
         {
@@ -138,9 +138,10 @@ class SolveTasks
             Console.WriteLine("Please enter a: ");
             a = double.Parse(Console.ReadLine());
         }
-        Console.WriteLine("Please enter b: ");
+        Console.Write("Please enter b: ");
         double b = double.Parse(Console.ReadLine());
         double x = (double)(-b) / a;
+        Console.WriteLine("{0} * x + {1} = 0", a, b);
         Console.WriteLine("x = {0}", x);
     }
 }

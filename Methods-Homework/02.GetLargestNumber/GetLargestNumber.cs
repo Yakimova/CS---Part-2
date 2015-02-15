@@ -15,6 +15,7 @@ class GetLargestNumber
         int second = int.Parse(Console.ReadLine());
         Console.Write("Please enter the third integer: ");
         int third = int.Parse(Console.ReadLine());
+
         Console.WriteLine("The largest number is: " + GetMax(GetMax(first, second),  third));
     }
     private static int GetMax(int first, int second)

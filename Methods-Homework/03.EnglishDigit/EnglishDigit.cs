@@ -10,6 +10,7 @@ class EnglishDigit
     {
         Console.Write("Please enter the integer number: ");
         int number = int.Parse(Console.ReadLine()); //512;
+
         Console.WriteLine(ReturnLastDigitAsWord(number));
     }
     private static string ReturnLastDigitAsWord(int number)

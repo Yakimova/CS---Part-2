@@ -10,16 +10,13 @@ class ReverseNumber
 {
     static void Main()
     {
-        //input
         Console.Write("Please enter an integer number: ");
         int number = int.Parse(Console.ReadLine());
 
         int reversed = ReversingNumber(number);
 
-        //output
         Console.WriteLine("The reversed number is: " + reversed);
     }
-
     private static int ReversingNumber(int number)
     {
         List<int> digit = new List<int>();

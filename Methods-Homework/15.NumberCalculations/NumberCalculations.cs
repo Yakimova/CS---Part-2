@@ -1,11 +1,11 @@
 ﻿using System;
 /*
-    Problem 14. Integer calculations
+    Problem 15.* Number calculations
 
-    Write methods to calculate minimum, maximum, average, sum and product of given set of integer numbers.
-    Use variable number of arguments.
+    Modify your last program and try to make it work for any number type, not just integer (e.g. decimal, float, byte, etc.)
+    Use generic method (read in Internet about generic methods in C#).
  */
-class IntegerCalculations
+class NumberCalculations
 {
     static void Main()
     {
@@ -22,7 +22,7 @@ class IntegerCalculations
         string operation = Console.ReadLine();
         switch (operation)
         {
-            case "min": Console.WriteLine(Minumum(array)); break;
+            case "min": Minumum(array); break;
             case "max": Console.WriteLine(Maximum(array)); break;
             case "sum": Console.WriteLine(Sum(array)); break;
             case "avg": Console.WriteLine(Average(array)); break;
@@ -43,7 +43,7 @@ class IntegerCalculations
         Console.WriteLine(Product(4, 8, 7, 0, 6556));
          */
     }
-    static int Minumum(params int[] elements)
+    static void Minumum<T>(ref[] elements)
     {
         int min = int.MaxValue;
         foreach (int element in elements)
@@ -53,14 +53,14 @@ class IntegerCalculations
                 min = element;
             }
         }
-        return min;
+        Console.WriteLine(min);
     }
     static int Maximum(params int[] elements)
     {
         int max = int.MinValue;
         foreach (int element in elements)
         {
-            if (element >max)
+            if (element > max)
             {
                 max = element;
             }
@@ -96,5 +96,4 @@ class IntegerCalculations
         }
         return pr;
     }
-
 }

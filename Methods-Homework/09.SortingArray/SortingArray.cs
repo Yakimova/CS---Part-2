@@ -18,6 +18,10 @@ class SortingArray
         {
             array[i] = int.Parse(stringArray[i]);
         }
+        Console.Write("Please enter the possition, from which you want to start searching for maximal element: ");
+        int possition = int.Parse(Console.ReadLine());
+        int maxelemen = MaximalElementfromGivenIndex(array, possition);
+        Console.WriteLine("The maximal element after {0} possition is {1}", possition, array[maxelemen]);
 
         //sorted in descending order
         SortingArrayDescending(array);
